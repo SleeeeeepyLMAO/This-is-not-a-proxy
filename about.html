@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>This is not a proxy</title>
+<style>
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh; /* Make the body take up the full viewport height */
+margin: 0; /* Remove default body margins */
+}
+
+button {
+background-color: blue;
+color: white;
+padding: 15px 30px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<button onclick="openIndexInIframe()">OPEN "THIS IS NOT A PROXY" IN ABOUT:BLANK</button>
+
+<script>
+function openIndexInIframe() {
+let newWindow = window.open('', '_blank');
+newWindow.document.write('<html><head><title>This is not a proxy</title></head><body><iframe src="index.html" width="1300" height="600"></iframe></body></html>');
+newWindow.document.close();
+}
+</script>
+
+</body>
+</html>

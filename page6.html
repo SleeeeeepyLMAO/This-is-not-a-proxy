@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ... [Your existing head content remains unchanged] ... -->
+</head>
+<body id="page-top">
+<!-- ... [Your existing body content up to the iframe container] ... -->
+
+<div class="lesson-iframe-container">
+<div id="iframeContainer">
+<iframe class="lesson-iframe" id="lesson-area" src="" width="640" height="480" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
+<button id="fullscreenButton">Fullscreen</button>
+</div>
+</div>
+
+<!-- ... [Rest of your HTML body content] ... -->
+
+<script>
+// Remove the show_preroll function entirely, as we're skipping it.
+//Remove any remaining unnecessary code related to the skipped "PLAY" functionality. Remove the entire skip_screen div.
+
+// Immediately load the iframe content when the page loads.
+window.onload = function() {
+var lesson_link = atob('bGVzc29uLTIyMA==');
+document.getElementById('lesson-area').src = "https://zohoho.us/lessons/" + lesson_link;
+};
+
+
+const fullscreenButton = document.getElementById('fullscreenButton');
+const fullscreenElement = document.getElementById('lesson-area');
+
+fullscreenButton.addEventListener('click', () => {
+if (fullscreenElement.requestFullscreen) {
+fullscreenElement.requestFullscreen();
+} else if (fullscreenElement.mozRequestFullScreen) { // Firefox
+fullscreenElement.mozRequestFullScreen();
+} else if (fullscreenElement.webkitRequestFullscreen) { // Chrome, Safari
+fullscreenElement.webkitRequestFullscreen();
+} else if (fullscreenElement.msRequestFullscreen) { // IE11
+fullscreenElement.msRequestFullscreen();
+}
+});
+
+//Optional: Add an event listener to exit fullscreen when ESC key is pressed
+document.addEventListener('keydown', (event) => {
+if (event.key === 'Escape') {
+document.exitFullscreen();
+}
+});
+</script>
+</body>
+</html>
