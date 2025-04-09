@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>lesson-348</title>
+<meta property="og:image" content="https://zohoho.us/lessons-img/lesson-348.png">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/style/style.css?1739645982" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link id="favicon" rel="icon" type="image/png" href="./img/google-drive.webp">
+<style>
+body { margin: 0; }
+.lesson-container {
+display: flex;
+flex-direction: column;
+}
+.lesson-iframe-container {
+width: 640px;
+height: 480px;
+margin-left: 0;
+}
+.lesson-iframe {
+width: 100%;
+height: 100%;
+border: none;
+}
+.fullscreen-button {
+margin-top: 10px;
+width: fit-content;
+padding: 10px 20px;
+background-color: #4CAF50;
+border: none;
+color: white;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+}
+</style>
+</head>
+<body id="page-top">
+
+<script>
+function open_fullscreen() {
+const iframe = document.getElementById('lesson-area');
+if (iframe.requestFullscreen) {
+iframe.requestFullscreen();
+} else if (iframe.mozRequestFullScreen) {
+iframe.mozRequestFullScreen();
+} else if (iframe.webkitRequestFullscreen) {
+iframe.webkitRequestFullscreen();
+} else if (iframe.msRequestFullscreen) {
+iframe.msRequestFullscreen();
+}
+}
+//Remove all the other javascript code except for the above function.
+
+</script>
+
+<div class="lesson-container">
+<div class="lesson-iframe-container">
+<iframe class="lesson-iframe" id="lesson-area" src="https://zohoho.us/lessons/lesson-348" width="640" height="480" scrolling="no" frameborder="0" allowfullscreen></iframe>
+</div>
+<button class="fullscreen-button" onclick="open_fullscreen()">Fullscreen</button>
+</div>
+
+</body>
+</html>
